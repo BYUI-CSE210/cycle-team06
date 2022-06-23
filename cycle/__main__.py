@@ -1,6 +1,8 @@
 import constants
 
 from game.casting.cast import Cast
+from game.casting.green import Player_Green
+from game.casting.red import Player_Red
 from game.scripting.script import Script
 from game.scripting.control_actors_action import ControlActorsAction
 from game.scripting.move_actors_action import MoveActorsAction
@@ -17,6 +19,8 @@ def main():
 
     # create the cast
     cast = Cast()
+    cast.add_actor("red", Player_Red())
+    cast.add_actor("green", Player_Green())
 
     # start the game
     keyboard_service = KeyboardService()
